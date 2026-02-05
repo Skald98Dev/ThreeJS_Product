@@ -22,7 +22,23 @@ body {
 
 
 
+/* -------- FLOATING 3D PRODUCT -------- */
 
+.three-floating {
+  position: absolute;
+  top: 50vh;                 /* exact middle of the two sections */
+  left: 35%;                 /* move toward left side */
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  z-index: 10;               /* above both sections */
+  pointer-events: auto;
+}
+
+.three-container {
+  width: 100%;
+  height: 100%;
+}
 /* -------- TOP SECTION -------- */
 
 .top-section {
@@ -44,8 +60,8 @@ body {
 /* Main Title */
 .title {
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 0%;
+  left: 0%;
   font-size: clamp(6rem, 18vw, 14rem);
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -73,7 +89,7 @@ body {
 /* Right block */
 .text-right {
   position: absolute;
-  top: 15%;
+  top: 10%;
   right: 5%;
   text-align: right;
   max-width: 260px;
@@ -90,6 +106,9 @@ body {
   text-transform: uppercase;
 }
 
+
+
+
 /* -------- BOTTOM SECTION -------- */
 
 .bottom-section {
@@ -98,8 +117,8 @@ body {
   background: #111;
   color: #eee;
 }
-
-/* Three.js canvas holder */
+/* 
+Three.js canvas holder */
 .three-container {
   flex: 2;
   position: relative;
@@ -231,25 +250,22 @@ body {
 }
 
 
-/* //3D OBJECT */
-.three-container {
-    display: inline-block;
-    /* position: relative; */
-    transform: translateX(0);
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+
+
+.three-floating {
+  animation: product-float-in 2s ease-out forwards;
 }
 
-
-.three-container {
-    transform: translateX(-200%);
-    animation-name: slide-in-left;
+@keyframes product-float-in {
+  from {
+    opacity: 0;
+    transform: translate(-70%, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
-
-
-
-
 
 
 @keyframes slide-in-left {
@@ -268,4 +284,43 @@ body {
     100% {
         transform: translateX(0);
     }
+}
+
+
+.three-floating {
+  position: absolute;
+  top: 67vh;                 /* exact middle of the two sections */
+  left: 45%;                 /* move toward left side */
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  z-index: 5;               /* above both sections */
+  pointer-events: auto;
+}
+
+.three-container {
+  width: 100%;
+  height: 100%;
+}
+
+.three-container,
+.three-floating canvas {
+  background: transparent !important;
+}
+
+
+@media (max-width: 1024px) {
+  .three-floating {
+    left: 50%;
+    width: 340px;
+    height: 440px;
+  }
+
+  .title {
+    font-size: clamp(4rem, 14vw, 10rem);
+  }
+
+  .three-text h2 {
+    font-size: 1.6rem;
+  }
 }

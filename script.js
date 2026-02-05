@@ -22,10 +22,10 @@ camera.position.x =-2;
 
 
 
-const renderer = new THREE.WebGLRenderer({ alpha: true });
+const renderer = new THREE.WebGLRenderer({   antialias: true,alpha: true });
 
 // 2. Set the clear color to transparent (color 0x000000, alpha 0)
-renderer.setClearColor(0x000000, 0);
+// renderer.setClearColor(0x000000, 0); 
 
 // 3. Ensure your scene background is not set
 scene.background = null; 
