@@ -79,31 +79,32 @@ body {
 }
 /* Left block */
 .text-left {
-  position: absolute;
-  bottom: 15%;
-  left: 5%;
+  position: relative;
+  bottom: 10%;
+  left: 1%;
   max-width: 300px;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
 }
 
 /* Right block */
 .text-right {
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: 5%;
+  right: 1.5%;
   text-align: right;
   max-width: 260px;
-  font-size: 0.85rem;
+  font-size: 1.3rem;
 }
 
 /* Label */
 .label {
   position: absolute;
   bottom: 10%;
-  right: 5%;
+  right: 2%;
   font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  
 }
 
 
@@ -137,6 +138,7 @@ Three.js canvas holder */
 .three-text h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: rgb(175, 175, 175);
 }
 
 .three-text p {
