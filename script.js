@@ -5,7 +5,6 @@ import {OrbitControls} from "jsm/controls/OrbitControls.js";
 const loader = new GLTFLoader();
 
 const container = document.querySelector(".three-container");
-// const container2 = document.querySelector(".title");
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x111111);
@@ -24,16 +23,10 @@ camera.position.x =-2;
 
 const renderer = new THREE.WebGLRenderer({   antialias: true,alpha: true });
 
-// 2. Set the clear color to transparent (color 0x000000, alpha 0)
-// renderer.setClearColor(0x000000, 0); 
-
 // 3. Ensure your scene background is not set
 scene.background = null; 
 renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
-
-// renderer.setSize(container.clientWidth, container.clientHeight);
-// container2.appendChild(renderer.domElement);
 
 
 const geo = new THREE.IcosahedronGeometry(1.0, 2);
@@ -67,8 +60,7 @@ scene.add( light3 );
 //3D OBJECT LOADING
 loader.load('Bottle2.glb', function(gltf){
 
-    scene.add(gltf.scene);
-    //mesh.add(gltf.scene);
+   scene.add(gltf.scene);
 }, undefined, function( error ){
 
     console.error(error);

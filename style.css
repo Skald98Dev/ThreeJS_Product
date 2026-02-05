@@ -290,7 +290,7 @@ Three.js canvas holder */
 .three-floating {
   position: absolute;
   top: 67vh;                 /* exact middle of the two sections */
-  left: 45%;                 /* move toward left side */
+  left: 35%;                 /* move toward left side */
   transform: translate(-50%, -50%);
   width: 400px;
   height: 500px;
@@ -309,18 +309,3 @@ Three.js canvas holder */
 }
 
 
-@media (max-width: 1024px) {
-  .three-floating {
-    left: 50%;
-    width: 340px;
-    height: 440px;
-  }
-
-  .title {
-    font-size: clamp(4rem, 14vw, 10rem);
-  }
-
-  .three-text h2 {
-    font-size: 1.6rem;
-  }
-}
