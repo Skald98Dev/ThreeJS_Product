@@ -1,6 +1,6 @@
-/*   FALLOUT  custom font */ 
+  /* FALLOUT  custom font 
  @font-face { font-family: Delicious; src: url('C:/Users/Skald/Desktop/Programming/website tutorial/website1/hemiHeadBdIt.otf'); } 
- @font-face { font-family: Delicious; font-weight: bold; src: url('hemiHeadBdIt.otf');}
+ @font-face { font-family: Delicious; font-weight: bold; src: url('hemiHeadBdIt.otf');} */
 
  /*Enables it forthe whole page */
 * {
@@ -307,7 +307,5 @@ Three.js canvas holder */
 .three-floating canvas {
   background: transparent !important;
 }
-
-
 
 
