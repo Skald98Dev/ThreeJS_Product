@@ -290,7 +290,7 @@ Three.js canvas holder */
 .three-floating {
   position: absolute;
   top: 67vh;                 /* exact middle of the two sections */
-  left: 35%;                 /* move toward left side */
+  left: 30%;                 /* move toward left side */
   transform: translate(-50%, -50%);
   width: 400px;
   height: 500px;
@@ -307,5 +307,6 @@ Three.js canvas holder */
 .three-floating canvas {
   background: transparent !important;
 }
+
 
 
