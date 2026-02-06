@@ -149,7 +149,7 @@ Three.js canvas holder */
 
 
 
-/* SLIDE IN ANIMATION */
+/* SLIDE IN ANIMATIONS */
 /* UPPER */
 /* TITLE */
 .title.three-text p {
@@ -289,6 +289,8 @@ Three.js canvas holder */
 }
 
 
+
+/* 3D DIV POSITION */
 .three-floating {
   position: absolute;
   top: 67vh;                 /* exact middle of the two sections */
