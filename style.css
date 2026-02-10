@@ -79,7 +79,7 @@ body {
 }
 /* Left block */
 .text-left {
-  position: relative;
+  position: ABSOLUTE;
   bottom: 10%;
   left: 1%;
   max-width: 300px;
@@ -258,6 +258,14 @@ Three.js canvas holder */
   animation: product-float-in 2s ease-out forwards;
 }
 
+
+
+
+
+
+
+
+
 @keyframes product-float-in {
   from {
     opacity: 0;
@@ -313,3 +321,277 @@ Three.js canvas holder */
 }
 
 
+
+
+
+/* ================================= */
+/* MOBILE LAYOUT OVERRIDE */
+/* ================================= */
+
+@media (max-width: 480px) {
+
+  /* Stack sections naturally */
+  .top-section,
+  .bottom-section {
+    position: relative;
+    min-height: auto;
+    height: auto;
+    
+  }
+
+  
+@keyframes product-float-in {
+  from {
+    opacity: 0;
+    transform: translate(-70%, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+  /* Remove absolute positioning chaos */
+  .title,
+  .text-left,
+  .text-right,
+  .label {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    transform: none !important;
+    animation: none;
+               transform: translateX(-200%);
+    animation-name: slide-in-left;
+  }
+
+  /* TOP SECTION GRID */
+  .top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 2rem;
+    gap: 1.5rem;
+    
+  }
+
+  .title {
+    grid-column: 1 / 2;
+    font-size: 3.2rem;
+       transform: translateX(-200%);
+    animation-name: slide-in-right;
+  }
+
+  .text-left {
+    grid-column: 1 / 2;
+    font-size: 1rem;
+ 
+  }
+
+  .text-right {
+    grid-column: 2 / 3;
+    text-align: right;
+    font-size: 1rem;
+          transform: translateX(-200%);
+    animation-name: slide-in-right;
+  }
+
+  .label {
+    grid-column: 2 / 3;
+    text-align: right;
+    font-size: 0.7rem;
+       transform: translateX(-200%);
+    animation-name: slide-in-right;
+    
+  }
+  .title.three-text p {
+    display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    overflow: hidden;
+       transform: translateX(-200%);
+    animation-name: slide-in-right;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+.three-floating {
+  animation: product-float-in 2s ease-out forwards;
+}
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  /* Stack sections naturally */
+  .top-section,
+  .bottom-section {
+    position: relative;
+    min-height: auto;
+    height: auto;
+    
+  }
+
+  
+@keyframes product-float-in {
+  from {
+    opacity: 0;
+    transform: translate(-70%, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+  /* Remove absolute positioning chaos */
+  .title,
+  .text-left,
+  .text-right,
+  .label {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    transform: none !important;
+    animation: none;
+               transform: translateX(-200%);
+    animation-name: slide-in-left;
+  }
+
+  /* TOP SECTION GRID */
+  .top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 2rem;
+    gap: 1.5rem;
+    
+  }
+
+  .title {
+    grid-column: 1 / 2;
+    font-size: 3.2rem;
+       transform: translateX(-200%);
+    animation-name: slide-in-right;
+  }
+
+  .text-left {
+    grid-column: 1 / 2;
+    font-size: 1rem;
+ 
+  }
+
+  .text-right {
+    grid-column: 2 / 3;
+    text-align: right;
+    font-size: 1rem;
+          transform: translateX(-200%);
+    animation-name: slide-in-right;
+  }
+
+  .label {
+    grid-column: 2 / 3;
+    text-align: right;
+    font-size: 0.7rem;
+       transform: translateX(-200%);
+    animation-name: slide-in-right;
+    
+  }
+  .title.three-text p {
+    display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    overflow: hidden;
+       transform: translateX(-200%);
+    animation-name: slide-in-right;
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+.three-floating {
+  animation: product-float-in 2s ease-out forwards;
+}
+}
+
+
+
+
+
+
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  background: #111; /* prevents white bottom */
+  color: #2b1a10;
+}
