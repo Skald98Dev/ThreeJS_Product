@@ -452,6 +452,12 @@ Three.js canvas holder */
 .three-floating {
   animation: product-float-in 2s ease-out forwards;
 }
+
+
+/* Mobile sizes */
+.label, .text-left, .text-right{
+font-size: 110%; 
+}
 }
 
 
@@ -497,6 +503,8 @@ Three.js canvas holder */
     100% {
         transform: translateX(0);
     }
+
+    
 }
 
 
@@ -581,11 +589,22 @@ Three.js canvas holder */
 .three-floating {
   animation: product-float-in 2s ease-out forwards;
 }
+
+
+/* Mobile sizes */
+.label, .text-left, .text-right{
+font-size: 110%; 
+}
+
+
 }
 
 
 
 
+.label{
+font-size: 110%; 
+}
 
 
 
