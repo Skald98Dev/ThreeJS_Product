@@ -456,7 +456,7 @@ Three.js canvas holder */
 
 /* Mobile sizes */
 .label, .text-left, .text-right{
-font-size: 110%; 
+font-size: 115%; 
 }
 }
 
@@ -593,20 +593,15 @@ font-size: 110%;
 
 /* Mobile sizes */
 .label, .text-left, .text-right{
-font-size: 110%; 
+font-size: 115%; 
 }
-
-
 }
-
 
 
 
 .label{
 font-size: 110%; 
 }
-
-
 
 html, body {
   height: 100%;

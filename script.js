@@ -20,7 +20,6 @@ camera.position.y = 0;
 camera.position.x =-2;
 
 
-
 const renderer = new THREE.WebGLRenderer({   antialias: true,alpha: true });
 
 // 3. Ensure your scene background is not set
@@ -34,7 +33,7 @@ const mat= new THREE.MeshStandardMaterial({
     color: 0xaaffff,
     wireframe: true,
     flatShading: true,
-   // map: uvTexture,
+
 });
 
 
@@ -45,31 +44,23 @@ controls.autoRotateSpeed = 10.0; // Adjust speed (default is 2.0)
 controls.enableDamping = true;
 controls.dampingFactor = 0.03;
 
-// Light
+// Light1
 const light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(5, 5, 5);
 scene.add(light);
-
-// // Light2
-// const light2 = new THREE.HemisphereLight( 0xffffff, 0x080820, 1 );
-// // scene.add( light2 );
+// Light2
 const light3 = new THREE.AmbientLight( 0x404040 ); // soft white light
 scene.add( light3 );
 
 
 //3D OBJECT LOADING
-loader.load('Bottle2.glb', function(gltf){
-
+loader.load('./models/Bottle2.glb', function(gltf){
    scene.add(gltf.scene);
 }, undefined, function( error ){
-
     console.error(error);
 });
 
-
-
 const mesh1 = new THREE.Mesh(geo, mat );
-
 
 //Scene drag and edit 
 function animate(t=0){
@@ -82,7 +73,6 @@ controls.update();
 }
 
 animate();
-
 
 
 // Resize handling
