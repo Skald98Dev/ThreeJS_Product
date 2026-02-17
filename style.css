@@ -4,9 +4,8 @@
 
  /*Enables it forthe whole page */
 * {
-font-family: 'Delicious';
+  font-family: Georgia, "Times New Roman" ;
 }
-
 
 * {
   box-sizing: border-box;
