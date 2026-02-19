@@ -60,7 +60,7 @@ Usage:
 
 Performance Considerations:
 -Model geometry is optimized for real-time rendering.
--Textures (if used) are compressed for web delivery.
+-Textures are compressed for web delivery.
 -Scene complexity is kept minimal to ensure smooth frame rates on mobile devices.
 
 Possible Enhancements:
